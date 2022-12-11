@@ -13,5 +13,7 @@ namespace tryitter.Models
         public string? Modulo { get; set; }
 
         public string? Status { get; set; }
+
+        public ICollection<Post>? Posts { get; set; }
     }
 }
