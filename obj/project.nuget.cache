@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WsBCMZ92wgh/RMjV1Zv7DQ4JUuVWvM3AXXheEHHukrLadT4IJ5n+zfizXUMsyzfLOLerbvuqIRwaq4kCWu0PvA==",
+  "dgSpecHash": "Mt3GB6AMuRNDKuzNtjQQo1KE/VnOUEf6+PefF6L7Dqo7WErUEgsVcywqDhRUiicvwclhDTReciSxGHkB15iHPA==",
   "success": true,
   "projectFilePath": "/home/amanda/trybe_projetos/tryitter/tryitter.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "/home/amanda/.nuget/packages/microsoft.entityframeworkcore.design/6.0.11/microsoft.entityframeworkcore.design.6.0.11.nupkg.sha512",
     "/home/amanda/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.11/microsoft.entityframeworkcore.relational.6.0.11.nupkg.sha512",
     "/home/amanda/.nuget/packages/microsoft.entityframeworkcore.sqlserver/6.0.11/microsoft.entityframeworkcore.sqlserver.6.0.11.nupkg.sha512",
+    "/home/amanda/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.11/microsoft.entityframeworkcore.tools.6.0.11.nupkg.sha512",
     "/home/amanda/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/home/amanda/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/home/amanda/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
