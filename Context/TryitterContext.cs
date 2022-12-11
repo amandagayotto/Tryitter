@@ -19,7 +19,7 @@ public class TryitterContext : DbContext
                 Server=127.0.0.1;
                 Database=tryitter_db;
                 User=SA;
-                Password=trybe22;
+                Password=#Trybe2022;
             ");
         }
     }
