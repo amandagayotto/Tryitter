@@ -26,5 +26,17 @@ namespace tryitter.Controllers
 
             return users;
         }
+
+        [HttpGet("{id}")]
+        public ActionResult<User> Get(int id)
+        {
+            var user = _context.Users.FirstOrDefault(p => p.UserId == id);
+            if(user is null)
+            {
+                return NotFound("Usuário não encontrado");
+            }
+
+            return user;
+        }
     }
 }
