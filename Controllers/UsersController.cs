@@ -9,35 +9,37 @@ namespace tryitter.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly TryitterContext _context;
+        private readonly AppDbContext _context;
 
-        public UsersController(TryitterContext context)
+        public UsersController(AppDbContext context)
         {
             _context = context;
         }
 
-        [HttpGet("posts")]
+        [HttpGet("tryitterposts")]
         public ActionResult<IEnumerable<User>> GetUsersPosts()
         {
-            var users = _context.Users.Include(p => p.Posts).ToList();
-            if(users is null)
+            var usersList = _context.Users.Include(p => p.TryitterPosts).ToList();
+
+            if(usersList is null)
             {
                 return NotFound("Usuários não encontrados");
             }
 
-            return users;
+            return usersList;
         }
 
-        [HttpGet("{id}", Name="GetUser")]
+        [HttpGet("{id:int}", Name="GetUser")]
         public ActionResult<User> Get(int id)
         {
-            var user = _context.Users.FirstOrDefault(u => u.UserId == id);
-            if(user is null)
+            var userById = _context.Users.FirstOrDefault(u => u.UserId == id);
+
+            if(userById is null)
             {
                 return NotFound("Usuário não encontrado");
             }
 
-            return user;
+            return userById;
         }
         
         [HttpPost]
@@ -51,6 +53,36 @@ namespace tryitter.Controllers
 
             return new CreatedAtRouteResult("GetUser",
                 new { id = user.UserId }, user);
+        }
+
+        [HttpPut("{id:int}")]
+        public ActionResult Put(int id, User user)
+        {
+            if(id != user.UserId)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(user).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return Ok(user);
+        }
+
+        [HttpDelete("{id:int}")]
+        public ActionResult<User> Delete(int id)
+        {
+            var userById = _context.Users.FirstOrDefault(u => u.UserId == id);
+
+            if(userById is null)
+            {
+                return NotFound("Usuário não encontrado");
+            }
+
+            _context.Users.Remove(userById);
+            _context.SaveChanges();
+
+            return Ok();
         }
     }
 }
