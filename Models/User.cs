@@ -25,6 +25,6 @@ namespace tryitter.Models
         [StringLength(300)]
         public string? Status { get; set; }
 
-        public ICollection<Post>? Posts { get; set; }
+        public ICollection<TryitterPost>? TryitterPosts { get; set; }
     }
 }
