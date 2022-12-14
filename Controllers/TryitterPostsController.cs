@@ -9,9 +9,9 @@ namespace tryitter.Controllers
     [ApiController]
     public class TryitterPostsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly TryitterContext _context;
 
-        public TryitterPostsController(AppDbContext context)
+        public TryitterPostsController(TryitterContext context)
         {
             _context = context;
         }

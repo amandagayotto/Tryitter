@@ -9,9 +9,9 @@ namespace tryitter.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly TryitterContext _context;
 
-        public UsersController(AppDbContext context)
+        public UsersController(TryitterContext context)
         {
             _context = context;
         }

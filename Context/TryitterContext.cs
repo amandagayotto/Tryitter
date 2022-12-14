@@ -6,10 +6,10 @@ namespace tryitter.Context;
 public class TryitterContext : DbContext
 {
     public TryitterContext(DbContextOptions<TryitterContext> options) : base(options) 
-    { }
+    {}
     public TryitterContext() {}
     public DbSet<User>? Users { get; set; }
-    public DbSet<Post>? Posts { get; set; }
+    public DbSet<TryitterPost>? TryitterPosts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
