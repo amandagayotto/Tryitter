@@ -19,7 +19,7 @@ namespace tryitter.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<TryitterPost>> Get()
         {
-            var postsList = _context.TryitterPosts.ToList();
+            var postsList = _context.TryitterPosts.AsNoTracking().Take(20).ToList();
 
             if(postsList is null)
             {

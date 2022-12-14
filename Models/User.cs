@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace tryitter.Models
 {
@@ -25,6 +26,7 @@ namespace tryitter.Models
         [StringLength(300)]
         public string? Status { get; set; }
 
+        [JsonIgnore]
         public ICollection<TryitterPost>? TryitterPosts { get; set; }
     }
 }

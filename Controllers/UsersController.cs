@@ -19,7 +19,7 @@ namespace tryitter.Controllers
         [HttpGet("tryitterposts")]
         public ActionResult<IEnumerable<User>> GetUsersPosts()
         {
-            var usersList = _context.Users.Include(p => p.TryitterPosts).ToList();
+            var usersList = _context.Users.Include(p => p.TryitterPosts).Where(u => u.UserId <= 10).ToList();
 
             if(usersList is null)
             {
