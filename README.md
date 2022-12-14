@@ -5,8 +5,7 @@ Este projeto trata-se de uma aplicação BackEnd para o **Tryitter**, uma rede s
 ## 🛠️ Requisitos Técnicos
 
 1. Implementação com C#, SQL Server e Azure;
-2. O projeto terá rotas autenticadas e rotas anônimas;
-3. Os testes serão criados com os frameworks xUnit e FluentAssertions.
+2. Os testes serão criados com os frameworks xUnit e FluentAssertions.
 
 ## 📋 Funcionalidades 
 
@@ -18,13 +17,15 @@ Este projeto trata-se de uma aplicação BackEnd para o **Tryitter**, uma rede s
  
 * Listar todos os posts de uma pessoa estudante;
 
+Link do vídeo com funcinemanto das rotas: https://vimeo.com/781263700/23478af164
+
 ## 📦 Desenvolvimento do projeto
 
-> No projeto haverá um Front-End que será responsável por interagir com as pessoas estudantes e mandar as muitas requisições para o Back-End, que, por sua vez, será responsável por manter as informações atualizadas em um banco de dados SQL Server usando o Framework Entity.
+> O projeto receberá várias requisições das pessoas estudantes e o Back-End, por sua vez, será responsável por manter as informações atualizadas em um banco de dados SQL Server usando o Framework Entity.
   
-> Nessa rede social, as pessoas estudantes irão se cadastrar com nome, e-mail, módulo atual que estão estudando na Trybe, status personalizado e senha para se autenticar. Será possível também alterar essa conta a qualquer momento, desde que a pessoa usuária esteja autenticada.
+> Nessa rede social, as pessoas estudantes irão se cadastrar com nome, e-mail, módulo atual que estão estudando na Trybe, status personalizado e senha. Será possível também alterar essa conta a qualquer momento.
 
-> Uma pessoa estudante poderá publicar posts em seu perfil, que devem conter textos com até 300 caracteres e arquivos de imagem, além de conseguir pesquisar outras contas por nome e optar por listar todos os seus posts.
+> Uma pessoa estudante poderá publicar posts em seu perfil, que devem conter textos com até 300 caracteres, arquivos de imagem e listar todos os seus posts.
  
  ## 📝 Arquitetura da API 
 
