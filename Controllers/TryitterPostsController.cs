@@ -58,18 +58,18 @@ namespace tryitter.Controllers
             }
         }
 
-        //pega post pelo id do estudante
+        //pega posts pelo id do estudante
         [HttpGet("User")]
         public ActionResult<IEnumerable<TryitterPost>> GetPostsByUserId(int id)
         {
-            var postByUserId = _context.TryitterPosts.Where(p => p.UserId == id).AsNoTracking().ToList();
+            var postsByUserId = _context.TryitterPosts.Where(p => p.UserId == id).AsNoTracking().ToList();
 
-            if(postByUserId is null)
+            if(postsByUserId is null)
             {
-                return NotFound("Post não encontrado");
+                return NotFound("Post(s) não encontrado(s)");
             }
 
-            return postByUserId;
+            return postsByUserId;
         }
         
         //cria um post
