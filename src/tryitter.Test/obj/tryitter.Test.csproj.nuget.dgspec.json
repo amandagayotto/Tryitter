@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter.Test/tryitter.Test.csproj": {}
+    "/home/amanda/trybe_projetos/tryitter/src/tryitter.Test/tryitter.Test.csproj": {}
   },
   "projects": {
-    "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter.Test/tryitter.Test.csproj": {
+    "/home/amanda/trybe_projetos/tryitter/src/tryitter.Test/tryitter.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter.Test/tryitter.Test.csproj",
+        "projectUniqueName": "/home/amanda/trybe_projetos/tryitter/src/tryitter.Test/tryitter.Test.csproj",
         "projectName": "tryitter.Test",
-        "projectPath": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter.Test/tryitter.Test.csproj",
-        "packagesPath": "/home/alanyfernandes/.nuget/packages/",
-        "outputPath": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter.Test/obj/",
+        "projectPath": "/home/amanda/trybe_projetos/tryitter/src/tryitter.Test/tryitter.Test.csproj",
+        "packagesPath": "/home/amanda/.nuget/packages/",
+        "outputPath": "/home/amanda/trybe_projetos/tryitter/src/tryitter.Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alanyfernandes/.nuget/NuGet/NuGet.Config"
+          "/home/amanda/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter/tryitter.csproj": {
-                "projectPath": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter/tryitter.csproj"
+              "/home/amanda/trybe_projetos/tryitter/src/tryitter/tryitter.csproj": {
+                "projectPath": "/home/amanda/trybe_projetos/tryitter/src/tryitter/tryitter.csproj"
               }
             }
           }
@@ -77,7 +77,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -86,21 +87,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter/tryitter.csproj": {
+    "/home/amanda/trybe_projetos/tryitter/src/tryitter/tryitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter/tryitter.csproj",
+        "projectUniqueName": "/home/amanda/trybe_projetos/tryitter/src/tryitter/tryitter.csproj",
         "projectName": "tryitter",
-        "projectPath": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter/tryitter.csproj",
-        "packagesPath": "/home/alanyfernandes/.nuget/packages/",
-        "outputPath": "/home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter/obj/",
+        "projectPath": "/home/amanda/trybe_projetos/tryitter/src/tryitter/tryitter.csproj",
+        "packagesPath": "/home/amanda/.nuget/packages/",
+        "outputPath": "/home/amanda/trybe_projetos/tryitter/src/tryitter/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alanyfernandes/.nuget/NuGet/NuGet.Config"
+          "/home/amanda/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -167,7 +168,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -179,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }

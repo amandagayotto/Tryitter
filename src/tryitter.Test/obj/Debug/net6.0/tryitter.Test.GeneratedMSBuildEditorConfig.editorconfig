@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = tryitter.Test
-build_property.ProjectDir = /home/alanyfernandes/Documents/Trybe/Csharp/final-project/tryitter/src/tryitter.Test/
+build_property.ProjectDir = /home/amanda/trybe_projetos/tryitter/src/tryitter.Test/
