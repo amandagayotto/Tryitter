@@ -19,34 +19,48 @@ namespace tryitter.Controllers
         [HttpGet("tryitterposts")]
         public ActionResult<IEnumerable<User>> GetUsersPosts()
         {
-            var usersList = _context.Users.Include(p => p.TryitterPosts).Where(u => u.UserId <= 10).ToList();
-
-            if(usersList is null)
+            try
             {
-                return NotFound("Usuários não encontrados");
-            }
+                var usersList = _context.Users.Include(p => p.TryitterPosts).Where(u => u.UserId <= 10).ToList();
 
-            return usersList;
+                if(usersList is null)
+                {
+                    return NotFound("Estudantes não encontrados");
+                }
+
+                return usersList;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema na sua solicitação");
+            }
         }
 
         [HttpGet("{id:int}", Name="GetUser")]
         public ActionResult<User> Get(int id)
         {
-            var userById = _context.Users.FirstOrDefault(u => u.UserId == id);
-
-            if(userById is null)
+            try
             {
-                return NotFound("Usuário não encontrado");
-            }
+                var userById = _context.Users.FirstOrDefault(u => u.UserId == id);
 
-            return userById;
+                if(userById is null)
+                {
+                    return NotFound("Estudante não encontrado");
+                }
+
+                return userById;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema na sua solicitação");
+            }
         }
         
         [HttpPost]
         public ActionResult Post(User user)
         {
             if(user is null)
-                return BadRequest();
+                return BadRequest("Dados inválidos");
 
             _context.Users.Add(user);
             _context.SaveChanges();
@@ -60,7 +74,7 @@ namespace tryitter.Controllers
         {
             if(id != user.UserId)
             {
-                return BadRequest();
+                return BadRequest("Dados inválidos");
             }
 
             _context.Entry(user).State = EntityState.Modified;
@@ -76,7 +90,7 @@ namespace tryitter.Controllers
 
             if(userById is null)
             {
-                return NotFound("Usuário não encontrado");
+                return NotFound("Estudante não encontrado");
             }
 
             _context.Users.Remove(userById);

@@ -19,34 +19,48 @@ namespace tryitter.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<TryitterPost>> Get()
         {
-            var postsList = _context.TryitterPosts.AsNoTracking().Take(20).ToList();
-
-            if(postsList is null)
+            try
             {
-                return NotFound("Posts não encontrados");
-            }
+                var postsList = _context.TryitterPosts.AsNoTracking().Take(20).ToList();
 
-            return postsList;
+                if(postsList is null)
+                {
+                    return NotFound("Posts não encontrados");
+                }
+
+                return postsList;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema na sua solicitação");
+            }
         }
 
         [HttpGet("{id:int}", Name="GetPost")]
         public ActionResult<TryitterPost> Get(int id)
         {
-            var postById = _context.TryitterPosts.FirstOrDefault(p => p.TryitterPostId == id);
-
-            if(postById is null)
+            try
             {
-                return NotFound("Post não encontrado");
-            }
+                   var postById = _context.TryitterPosts.FirstOrDefault(p => p.TryitterPostId == id);
 
-            return postById;
+                if(postById is null)
+                {
+                    return NotFound("Post não encontrado");
+                }
+
+                return postById;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema na sua solicitação");
+            }
         }
         
         [HttpPost]
         public ActionResult Post(TryitterPost tryitterPost)
         {
             if(tryitterPost is null)
-                return BadRequest();
+                return BadRequest("Dados inválidos");
 
             _context.TryitterPosts.Add(tryitterPost);
             _context.SaveChanges();
@@ -60,7 +74,7 @@ namespace tryitter.Controllers
         {
             if(id != tryitterPost.TryitterPostId)
             {
-                return BadRequest();
+                return BadRequest("Dados inválidos");
             }
 
             _context.Entry(tryitterPost).State = EntityState.Modified;
