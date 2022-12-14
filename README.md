@@ -1,6 +1,6 @@
 # Boas vindas ao repositório do Tryitter!
 
-   Este projeto trata-se de uma aplicação BackEnd para o **Tryitter**, uma rede social que tem como objetivo proporcionar um ambiente em que as pessoas estudantes poderão, por meio de textos e imagens, compartilhar suas experiências e também acessar posts que possam contribuir para seu aprendizado.💚
+    Este projeto trata-se de uma aplicação BackEnd para o **Tryitter**, uma rede social que tem como objetivo proporcionar um ambiente em que as pessoas estudantes poderão, por meio de textos e imagens, compartilhar suas experiências e também acessar posts que possam contribuir para seu aprendizado.💚
 
 ## 🛠️ Requisitos Técnicos
 
@@ -20,11 +20,11 @@
 
 ## 📦 Desenvolvimento do projeto
 
-   No projeto haverá um Front-End que será responsável por interagir com as pessoas estudantes e mandar as muitas requisições para o Back-End, que, por sua vez, será responsável por manter as informações atualizadas em um banco de dados SQL Server usando o Framework Entity.
+    No projeto haverá um Front-End que será responsável por interagir com as pessoas estudantes e mandar as muitas requisições para o Back-End, que, por sua vez, será responsável por manter as informações atualizadas em um banco de dados SQL Server usando o Framework Entity.
   
-   Nessa rede social, as pessoas estudantes irão se cadastrar com nome, e-mail, módulo atual que estão estudando na Trybe, status personalizado e senha para se autenticar. Será possível também alterar essa conta a qualquer momento, desde que a pessoa usuária esteja autenticada.
+    Nessa rede social, as pessoas estudantes irão se cadastrar com nome, e-mail, módulo atual que estão estudando na Trybe, status personalizado e senha para se autenticar. Será possível também alterar essa conta a qualquer momento, desde que a pessoa usuária esteja autenticada.
 
-   Uma pessoa estudante poderá publicar posts em seu perfil, que devem conter textos com até 300 caracteres e arquivos de imagem, além de conseguir pesquisar outras contas por nome e optar por listar todos os seus posts.
+    Uma pessoa estudante poderá publicar posts em seu perfil, que devem conter textos com até 300 caracteres e arquivos de imagem, além de conseguir pesquisar outras contas por nome e optar por listar todos os seus posts.
  
  ## Arquitetura da API 📝
 
