@@ -16,12 +16,13 @@ namespace tryitter.Controllers
             _context = context;
         }
 
-        [HttpGet("tryitterposts")]
-        public ActionResult<IEnumerable<User>> GetUsersPosts()
+        //pega todos os estudantes
+        [HttpGet]
+        public ActionResult<IEnumerable<User>> GetUsers()
         {
             try
             {
-                var usersList = _context.Users.Include(p => p.TryitterPosts).Where(u => u.UserId <= 10).ToList();
+                var usersList = _context.Users.AsNoTracking().Take(20).ToList();
 
                 if(usersList is null)
                 {
@@ -36,6 +37,7 @@ namespace tryitter.Controllers
             }
         }
 
+        //pega estudante pelo seu id
         [HttpGet("{id:int}", Name="GetUser")]
         public ActionResult<User> Get(int id)
         {
@@ -56,6 +58,7 @@ namespace tryitter.Controllers
             }
         }
         
+        //cria uma conta para um estudante
         [HttpPost]
         public ActionResult Post(User user)
         {
@@ -69,6 +72,7 @@ namespace tryitter.Controllers
                 new { id = user.UserId }, user);
         }
 
+        //altera a conta do estudante pelo seu id
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, User user)
         {
@@ -83,6 +87,7 @@ namespace tryitter.Controllers
             return Ok(user);
         }
 
+        //deleta a conta do estudante pelo seu id
         [HttpDelete("{id:int}")]
         public ActionResult<User> Delete(int id)
         {

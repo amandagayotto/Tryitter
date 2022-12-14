@@ -16,6 +16,7 @@ namespace tryitter.Controllers
             _context = context;
         }
 
+        //pega todos os posts
         [HttpGet]
         public ActionResult<IEnumerable<TryitterPost>> Get()
         {
@@ -36,12 +37,13 @@ namespace tryitter.Controllers
             }
         }
 
+        //pega post pelo seu id
         [HttpGet("{id:int}", Name="GetPost")]
         public ActionResult<TryitterPost> Get(int id)
         {
             try
             {
-                   var postById = _context.TryitterPosts.FirstOrDefault(p => p.TryitterPostId == id);
+                var postById = _context.TryitterPosts.FirstOrDefault(p => p.TryitterPostId == id);
 
                 if(postById is null)
                 {
@@ -55,7 +57,22 @@ namespace tryitter.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um problema na sua solicitação");
             }
         }
+
+        //pega post pelo id do estudante
+        [HttpGet("User")]
+        public ActionResult<IEnumerable<TryitterPost>> GetPostsByUserId(int id)
+        {
+            var postByUserId = _context.TryitterPosts.Where(p => p.UserId == id).AsNoTracking().ToList();
+
+            if(postByUserId is null)
+            {
+                return NotFound("Post não encontrado");
+            }
+
+            return postByUserId;
+        }
         
+        //cria um post
         [HttpPost]
         public ActionResult Post(TryitterPost tryitterPost)
         {
@@ -69,6 +86,7 @@ namespace tryitter.Controllers
                 new { id = tryitterPost.TryitterPostId }, tryitterPost);
         }
 
+        //altera um post pelo seu id
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, TryitterPost tryitterPost)
         {
@@ -83,6 +101,7 @@ namespace tryitter.Controllers
             return Ok(tryitterPost);
         }
 
+        //deleta um post pelo seu id
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
