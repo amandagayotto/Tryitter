@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace tryitter.Models
 {
@@ -17,6 +18,7 @@ namespace tryitter.Models
         [Required]
         public int UserId { get; set; }
 
+        [JsonIgnore]
         public User? User { get; set; }
     }
 }
