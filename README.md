@@ -1,6 +1,6 @@
 # Boas vindas ao repositório do Tryitter!
 
-    Este projeto trata-se de uma aplicação BackEnd para o **Tryitter**, uma rede social que tem como objetivo proporcionar um ambiente em que as pessoas estudantes poderão, por meio de textos e imagens, compartilhar suas experiências e também acessar posts que possam contribuir para seu aprendizado.💚
+Este projeto trata-se de uma aplicação BackEnd para o **Tryitter**, uma rede social que tem como objetivo proporcionar um ambiente em que as pessoas estudantes poderão, por meio de textos e imagens, compartilhar suas experiências e também acessar posts que possam contribuir para seu aprendizado.💚
 
 ## 🛠️ Requisitos Técnicos
 
